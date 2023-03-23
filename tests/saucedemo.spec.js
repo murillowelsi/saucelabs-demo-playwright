@@ -21,13 +21,10 @@ test.describe("Inventory Page", () => {
 
     await inventoryPage.validatePageElements();
     await inventoryPage.updateCart("add", "labs-backpack");
-
     await inventoryPage.checkCartCounter("1");
     await inventoryPage.accessCartDetails();
-
     await cartPage.validatePageElements()
     await cartPage.checkoutCart()
-
     await checkoutPage.validatePageElements();
   });
 });
